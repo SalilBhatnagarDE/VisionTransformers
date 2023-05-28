@@ -9,6 +9,6 @@ setuptools.setup(
     author="Salil Bhatnagar",
     author_email="salil.bhatnagar@fau.de",
     packages=setuptools.find_packages(),
-    install_requires=["torch", "torchvision", "matplotlib", "matplotlib.pyplot", "numpy", "torch.utils.data", "torch.nn", "torch.nn.functional",
+    install_requires=["torch", "torchvision", "matplotlib", "numpy", "torch.utils.data", "torch.nn", "torch.nn.functional",
                       "PIL", "torchvision.transforms", "einops", "einops.layers.torch", "cv2", "math"]
 )
