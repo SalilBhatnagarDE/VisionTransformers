@@ -21,8 +21,10 @@ to the sequence.
 ## Use this repository to train Vision Transformers on custom datasets
 Using this repository, one can train the Vision Transformer from scratch. 
 
+There are no pretrained weigths as of now in this repository. You can train on custom datasets from scratch.
+
 ## Installation and steps to follow
-Please follow below steps in order install it and train it on custom dataset :
+Please follow the below steps in order to install Vision_Transformer and train it on custom datasets :
 1. pip install git+https://github.com/SalilBhatnagarDE/VisionTransformers.git 
 
 2. import Vision_Transformer
