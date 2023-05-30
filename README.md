@@ -25,7 +25,8 @@ Using this repository, one can train the Vision Transformer from scratch.
 Please follow below steps in order install it and train it on custom dataset :
 1. pip install git+https://github.com/SalilBhatnagarDE/VisionTransformers.git 
 2. import Vision_Transformer
-3. Define your datasets and dataloaders. An example is shown below :
+3. Define your datasets and dataloaders. 
+An example is shown below :
 import torchvision
 import torch
 mnist_train_dataset = torchvision.datasets.MNIST(root='./data', train = True, transform=torchvision.transforms.ToTensor(), download=True)
