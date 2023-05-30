@@ -10,5 +10,5 @@ setuptools.setup(
     author_email="salil.bhatnagar@fau.de",
     packages=setuptools.find_packages(),
     install_requires=["torch", "torchvision", "matplotlib", "numpy",
-                      "einops", "opencv-python", "python-math"]
+                      "einops", "opencv-python", "python-math", "Pillow"]
 )
