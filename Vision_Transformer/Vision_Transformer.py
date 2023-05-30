@@ -10,8 +10,9 @@ Thanks to their ability to capture global semantic relationships in an image, un
 
 """
 
-pip install einops
-pip install PIL
+
+!pip install einops
+!pip install PIL
 
 import torch
 import torchvision
