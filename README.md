@@ -25,11 +25,11 @@ There are no pretrained weigths as of now in this repository. You can train on c
 
 ## Installation and steps to follow
 Please follow the below steps in order to install Vision_Transformer and train it on custom datasets :
-### 1. pip install git+https://github.com/SalilBhatnagarDE/VisionTransformers.git 
+#### 1. pip install git+https://github.com/SalilBhatnagarDE/VisionTransformers.git 
 
-### 2. import Vision_Transformer
+#### 2. import Vision_Transformer
 
-### 3. Define your datasets and dataloaders. 
+#### 3. Define your datasets and dataloaders. 
 - An example is shown below :
 - import torchvision
 - import torch
@@ -38,9 +38,9 @@ Please follow the below steps in order to install Vision_Transformer and train i
 - mnist_test_dataset = torchvision.datasets.MNIST(root="./data", train=False, transform=torchvision.transforms.ToTensor(), download=True)
 - mnist_test_dataloader = torch.utils.data.DataLoader(mnist_test_dataset, shuffle=False, batch_size=64)
 
-### 4. Select device for training => device = torch.device("cpu")
+#### 4. Select device for training => device = torch.device("cpu")
 
-### 5. Make a model object using class Vision_Transformer.LightViT :
+#### 5. Make a model object using class Vision_Transformer.LightViT :
 - model = Vision_Transformer.LightViT(image_dim=(1,28,28), n_patches=7, n_encoder_blocks=1, d=8, n_heads=4, num_classes=10)
 - image_dim is the input dimension of the images
 - n_patches are the number of patches you want to have in a single input image
@@ -50,11 +50,11 @@ Please follow the below steps in order to install Vision_Transformer and train i
 - num_classes depends upon your classification problem
 - All the above arguments need to pass through Vision_Transformer.LightViT to initiate the object model.
 
-### 6. Define optimizer, loss_criterion and number of epochs and pass the arguments to function train_model
+#### 6. Define optimizer, loss_criterion and number of epochs and pass the arguments to function train_model
 
-### 7. Example : 
+#### 7. Example : 
 - train_accuracies, train_losses, test_accuracies, test_losses = Vision_Transformer.train_model(model, train_dataloader=mnist_train_dataloader, train_dataset=mnist_train_dataset, test_dataloader=mnist_test_dataloader, test_dataset=mnist_test_dataset, num_epochs=5, optimizer=torch.optim.Adam(model.parameters(), lr=0.005), loss_criterion=torch.nn.CrossEntropyLoss())
 
-### 8. To plot training curves, use below code :
+#### 8. To plot training curves, use below code :
 - Vision_Transformer.plot_accuracy(train_accuracies, test_accuracies, num_epochs=5)
 - Vision_Transformer.plot_loss(train_losses, test_losses, num_epochs=5)
